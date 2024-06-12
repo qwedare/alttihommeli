@@ -8,16 +8,19 @@
 
     <title>Alttihommeli väsäys juttu</title>
   </head>
-  <body>
-    <h1>Alttihommeli väsäys juttu</h1>
+  <body onunload="resetPage()">
+    <!-- <h1>Alttihommeli väsäys juttu</h1> -->
 
+    <!-- PAGE 1 -->
     <div class="slidecontainer" id="startProcess">
-      <h2>Minkä pelin alttikriisi on kyseessä?</h2>
-      <p>Wouwi vai Xiv</p>
+      <h1>Minkä pelin alttikriisi on kyseessä?</h1>
+      <h2>Wouwi vai Xiv</h2>
+      <p>Liikuta slaideria valitaksesi juttuja</p>
       <input type="range" min="1" max="2" value="1" class="slider" id="game" />
       <p><span id="gameOut"></span></p>
     </div>
 
+    <!-- PAGE 2 -->
     <div class="slidecontainer" id="startSlider">
       <h2>Vertailtavat <span id="classOrJob"></span></h2>
       <p>Kuinka monta eri <span id="classOrJobs"></span></p>
@@ -32,6 +35,7 @@
       <p><span id="classOrJobAmountOut"></span></p>
     </div>
 
+    <!-- PAGE 3 -->
     <div class="slidecontainer" id="askNames">
       <h2>Nimeä <span id="nameClassOrJobs"></span></h2>
       <p id="job1">1.<input type="text" id="job1Input" value="" /></p>
@@ -46,6 +50,7 @@
       <p id="job10">10.<input type="text" id="job10Input" value="" /></p>
     </div>
 
+    <!-- PAGE 4 -->
     <div class="slidecontainer" id="prioritySlider">
       <h2>Ratee omat prioriteetit</h2>
       <p>Dunkku hupi prioriteetti:</p>
@@ -114,7 +119,7 @@
       />
       <p><span id="randomPriorityOut"></span></p>
 
-      <p>Transmog hupi prioriteetti:</p>
+      <p><span id="glamourTransmog1"></span> hupi prioriteetti:</p>
       <input
         type="range"
         min="0"
@@ -126,86 +131,878 @@
       <p><span id="transmogPriorityOut"></span></p>
     </div>
 
-    <!-- OMAT HUPI HOMMELIT -->
-    <div class="slidecontainer" id="funSlider">
-      <!-- OMAT HUPI HOMMELIT -->
+    <!-- PAGE 5 -->
+    <!-- Rating number 1 -->
+    <div class="slidecontainer" id="funSlider1">
       <h2>Ratee omat hupijutut</h2>
-      <p class="classorjob">Dunkku hupi:</p>
+      <h2><span id="classOrJob1"></span></h2>
+      <p>Dunkku hupi:</p>
       <input
         type="range"
         min="0"
         max="10"
         value="5"
         class="slider"
-        id="dungeonFun"
+        id="dungeonFun1"
       />
-      <p><span id="dungeonFunOut"></span></p>
+      <p><span id="dungeonFun1Out"></span></p>
 
-      <p class="classorjob">Raidi hupi:</p>
+      <p>Raidi hupi:</p>
       <input
         type="range"
         min="0"
         max="10"
         value="5"
         class="slider"
-        id="raidFun"
+        id="raidFun1"
       />
-      <p><span id="raidFunOut"></span></p>
+      <p><span id="raidFun1Out"></span></p>
 
-      <p class="classorjob">PvP hupi:</p>
+      <p>PvP hupi:</p>
       <input
         type="range"
         min="0"
         max="10"
         value="5"
         class="slider"
-        id="pvpFun"
+        id="pvpFun1"
       />
-      <p><span id="pvpFunOut"></span></p>
+      <p><span id="pvpFun1Out"></span></p>
 
-      <p class="classorjob">Rotaatio hupi:</p>
+      <p>Rotaatio hupi:</p>
       <input
         type="range"
         min="0"
         max="10"
         value="5"
         class="slider"
-        id="rotationFun"
+        id="rotationFun1"
       />
-      <p><span id="rotationFunOut"></span></p>
+      <p><span id="rotationFun1Out"></span></p>
 
-      <p class="classorjob">Maailma hupi:</p>
+      <p>Maailma hupi:</p>
       <input
         type="range"
         min="0"
         max="10"
         value="5"
         class="slider"
-        id="worldFun"
+        id="worldFun1"
       />
-      <p><span id="worldFunOut"></span></p>
+      <p><span id="worldFun1Out"></span></p>
 
-      <p class="classorjob">Random hupi:</p>
+      <p>Random hupi:</p>
       <input
         type="range"
         min="0"
         max="10"
         value="5"
         class="slider"
-        id="randomFun"
+        id="randomFun1"
       />
-      <p><span id="randomFunOut"></span></p>
+      <p><span id="randomFun1Out"></span></p>
 
-      <p class="classorjob">Transmog hupi:</p>
+      <p><span id="glamourTransmog2"></span> hupi:</p>
       <input
         type="range"
         min="0"
         max="10"
         value="5"
         class="slider"
-        id="transmogFun"
+        id="transmogFun1"
       />
-      <p><span id="transmogFunOut"></span></p>
+      <p><span id="transmogFun1Out"></span></p>
+    </div>
+
+    <!-- PAGE 6 -->
+    <!-- Rating number 2 -->
+    <div class="slidecontainer" id="funSlider2">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob2"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun2"
+      />
+      <p><span id="dungeonFun2Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun2"
+      />
+      <p><span id="raidFun2Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun2"
+      />
+      <p><span id="pvpFun2Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun2"
+      />
+      <p><span id="rotationFun2Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun2"
+      />
+      <p><span id="worldFun2Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun2"
+      />
+      <p><span id="randomFun2Out"></span></p>
+
+      <p><span id="glamourTransmog3"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun2"
+      />
+      <p><span id="transmogFun2Out"></span></p>
+    </div>
+
+    <!-- PAGE 7 -->
+    <!-- Rating number 3 -->
+    <div class="slidecontainer" id="funSlider3">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob3"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun3"
+      />
+      <p><span id="dungeonFun3Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun3"
+      />
+      <p><span id="raidFun3Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun3"
+      />
+      <p><span id="pvpFun3Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun3"
+      />
+      <p><span id="rotationFun3Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun3"
+      />
+      <p><span id="worldFun3Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun3"
+      />
+      <p><span id="randomFun3Out"></span></p>
+
+      <p><span id="glamourTransmog4"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun3"
+      />
+      <p><span id="transmogFun3Out"></span></p>
+    </div>
+
+    <!-- PAGE 8 -->
+    <!-- Rating number 4 -->
+    <div class="slidecontainer" id="funSlider4">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob4"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun4"
+      />
+      <p><span id="dungeonFun4Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun4"
+      />
+      <p><span id="raidFun4Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun4"
+      />
+      <p><span id="pvpFun4Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun4"
+      />
+      <p><span id="rotationFun4Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun4"
+      />
+      <p><span id="worldFun4Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun4"
+      />
+      <p><span id="randomFun4Out"></span></p>
+
+      <p><span id="glamourTransmog5"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun4"
+      />
+      <p><span id="transmogFun4Out"></span></p>
+    </div>
+
+    <!-- PAGE 9 -->
+    <!-- Rating number 5 -->
+    <div class="slidecontainer" id="funSlider5">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob5"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun5"
+      />
+      <p><span id="dungeonFun5Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun5"
+      />
+      <p><span id="raidFun5Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun5"
+      />
+      <p><span id="pvpFun5Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun5"
+      />
+      <p><span id="rotationFun5Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun5"
+      />
+      <p><span id="worldFun5Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun5"
+      />
+      <p><span id="randomFun5Out"></span></p>
+
+      <p><span id="glamourTransmog6"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun5"
+      />
+      <p><span id="transmogFun5Out"></span></p>
+    </div>
+
+    <!-- PAGE 10 -->
+    <!-- Rating number 6 -->
+    <div class="slidecontainer" id="funSlider6">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob6"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun6"
+      />
+      <p><span id="dungeonFun6Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun6"
+      />
+      <p><span id="raidFun6Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun6"
+      />
+      <p><span id="pvpFun6Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun6"
+      />
+      <p><span id="rotationFun6Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun6"
+      />
+      <p><span id="worldFun6Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun6"
+      />
+      <p><span id="randomFun6Out"></span></p>
+
+      <p><span id="glamourTransmog7"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun6"
+      />
+      <p><span id="transmogFun6Out"></span></p>
+    </div>
+
+    <!-- PAGE 11 -->
+    <!-- Rating number 7 -->
+    <div class="slidecontainer" id="funSlider7">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob7"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun7"
+      />
+      <p><span id="dungeonFun7Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun7"
+      />
+      <p><span id="raidFun7Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun7"
+      />
+      <p><span id="pvpFun7Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun7"
+      />
+      <p><span id="rotationFun7Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun7"
+      />
+      <p><span id="worldFun7Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun7"
+      />
+      <p><span id="randomFun7Out"></span></p>
+
+      <p><span id="glamourTransmog8"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun7"
+      />
+      <p><span id="transmogFun7Out"></span></p>
+    </div>
+
+    <!-- PAGE 12 -->
+    <!-- Rating number 8 -->
+    <div class="slidecontainer" id="funSlider8">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob8"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun8"
+      />
+      <p><span id="dungeonFun8Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun8"
+      />
+      <p><span id="raidFun8Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun8"
+      />
+      <p><span id="pvpFun8Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun8"
+      />
+      <p><span id="rotationFun8Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun8"
+      />
+      <p><span id="worldFun8Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun8"
+      />
+      <p><span id="randomFun8Out"></span></p>
+
+      <p><span id="glamourTransmog9"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun8"
+      />
+      <p><span id="transmogFun8Out"></span></p>
+    </div>
+
+    <!-- PAGE 13 -->
+    <!-- Rating number 9 -->
+    <div class="slidecontainer" id="funSlider9">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob9"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun9"
+      />
+      <p><span id="dungeonFun9Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun9"
+      />
+      <p><span id="raidFun9Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun9"
+      />
+      <p><span id="pvpFun9Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun9"
+      />
+      <p><span id="rotationFun9Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun9"
+      />
+      <p><span id="worldFun9Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun9"
+      />
+      <p><span id="randomFun9Out"></span></p>
+
+      <p><span id="glamourTransmog10"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun9"
+      />
+      <p><span id="transmogFun9Out"></span></p>
+    </div>
+
+    <!-- PAGE 14 -->
+    <!-- Rating number 10 -->
+    <div class="slidecontainer" id="funSlider10">
+      <h2>Ratee omat hupijutut</h2>
+      <h2><span id="classOrJob10"></span></h2>
+      <p>Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun10"
+      />
+      <p><span id="dungeonFun10Out"></span></p>
+
+      <p>Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun10"
+      />
+      <p><span id="raidFun10Out"></span></p>
+
+      <p>PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun10"
+      />
+      <p><span id="pvpFun10Out"></span></p>
+
+      <p>Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun10"
+      />
+      <p><span id="rotationFun10Out"></span></p>
+
+      <p>Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun10"
+      />
+      <p><span id="worldFun10Out"></span></p>
+
+      <p>Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun10"
+      />
+      <p><span id="randomFun10Out"></span></p>
+
+      <p><span id="glamourTransmog11"></span> hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun10"
+      />
+      <p><span id="transmogFun10Out"></span></p>
+    </div>
+
+    <!-- PAGE 15 -->
+    <!-- Results -->
+    <div class="slidecontainer" id="results1">
+      <h2>Lopputulos</h2>
+      <h2><span id="classOrJob1ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob1Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results2">
+      <h2><span id="classOrJob2ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob2Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results3">
+      <h2><span id="classOrJob3ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob3Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results4">
+      <h2><span id="classOrJob4ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob4Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results5">
+      <h2><span id="classOrJob5ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob5Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results6">
+      <h2><span id="classOrJob6ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob6Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results7">
+      <h2><span id="classOrJob7ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob7Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results8">
+      <h2><span id="classOrJob8ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob8Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results9">
+      <h2><span id="classOrJob9ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob9Result"></span>%</p>
+    </div>
+    <div class="slidecontainer" id="results10">
+      <h2><span id="classOrJob10ResultName"></span></h2>
+      <p>Yhteensopivuus <span id="classOrJob10Result"></span>%</p>
     </div>
 
     <p>
@@ -214,6 +1011,14 @@
       </button>
       <button onclick="showNext()" id="nextButton" class="buttonright">
         Seuraava
+      </button>
+    </p>
+    <p>
+      <button onclick="showHome()" id="homeButton" class="buttonleft">
+        Alkuun
+      </button>
+      <button onclick="showResults()" id="resultsButton" class="buttonright">
+        Tulokset
       </button>
     </p>
 

@@ -40,6 +40,9 @@ p {
 .buttonright {
   margin-right: 0px auto;
 }
+.buttonmiddle {
+  margin-left: 0px auto;
+}
 
 .slidecontainer {
   margin: 0px auto; /* center */
