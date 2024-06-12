@@ -56,7 +56,7 @@ p {
   appearance: none;
   width: 100%; /* Full-width */
   height: 25px; /* Specified height */
-  background: #00fff2; /* Grey background */ /*d3d3d3*/
+  background: #00fff2;
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
@@ -74,13 +74,13 @@ p {
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #04aa6d; /* Green background */
+  background: #9900ff;
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #9900ff; /* Green background */
+  background: #9900ff;
   cursor: pointer; /* Cursor on hover */
 }
