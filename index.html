@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="style.css" rel="stylesheet" />
+
+    <title>Alttihommeli väsäys juttu</title>
+  </head>
+  <body>
+    <h1>Alttihommeli väsäys juttu</h1>
+
+    <div class="slidecontainer" id="startProcess">
+      <h2>Minkä pelin alttikriisi on kyseessä?</h2>
+      <p>Wouwi vai Xiv</p>
+      <input type="range" min="1" max="2" value="1" class="slider" id="game" />
+      <p><span id="gameOut"></span></p>
+    </div>
+
+    <div class="slidecontainer" id="startSlider">
+      <h2>Vertailtavat <span id="classOrJob"></span></h2>
+      <p>Kuinka monta eri <span id="classOrJobs"></span></p>
+      <input
+        type="range"
+        min="1"
+        max="10"
+        value="1"
+        class="slider"
+        id="classOrJobAmount"
+      />
+      <p><span id="classOrJobAmountOut"></span></p>
+    </div>
+
+    <div class="slidecontainer" id="askNames">
+      <h2>Nimeä <span id="nameClassOrJobs"></span></h2>
+      <p id="job1">1.<input type="text" id="job1Input" value="" /></p>
+      <p id="job2">2.<input type="text" id="job2Input" value="" /></p>
+      <p id="job3">3.<input type="text" id="job3Input" value="" /></p>
+      <p id="job4">4.<input type="text" id="job4Input" value="" /></p>
+      <p id="job5">5.<input type="text" id="job5Input" value="" /></p>
+      <p id="job6">6.<input type="text" id="job6Input" value="" /></p>
+      <p id="job7">7.<input type="text" id="job7Input" value="" /></p>
+      <p id="job8">8.<input type="text" id="job8Input" value="" /></p>
+      <p id="job9">9.<input type="text" id="job9Input" value="" /></p>
+      <p id="job10">10.<input type="text" id="job10Input" value="" /></p>
+    </div>
+
+    <div class="slidecontainer" id="prioritySlider">
+      <h2>Ratee omat prioriteetit</h2>
+      <p>Dunkku hupi prioriteetti:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonPriority"
+      />
+      <p><span id="dungeonPriorityOut"></span></p>
+
+      <p>Raidi hupi prioriteetti:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidPriority"
+      />
+      <p><span id="raidPriorityOut"></span></p>
+
+      <p>PvP hupi prioriteetti:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpPriority"
+      />
+      <p><span id="pvpPriorityOut"></span></p>
+
+      <p>Rotaatio hupi prioriteetti:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationPriority"
+      />
+      <p><span id="rotationPriorityOut"></span></p>
+
+      <p>Maailma hupi prioriteetti:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldPriority"
+      />
+      <p><span id="worldPriorityOut"></span></p>
+
+      <p>Random hupi prioriteetti:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomPriority"
+      />
+      <p><span id="randomPriorityOut"></span></p>
+
+      <p>Transmog hupi prioriteetti:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogPriority"
+      />
+      <p><span id="transmogPriorityOut"></span></p>
+    </div>
+
+    <!-- OMAT HUPI HOMMELIT -->
+    <div class="slidecontainer" id="funSlider">
+      <!-- OMAT HUPI HOMMELIT -->
+      <h2>Ratee omat hupijutut</h2>
+      <p class="classorjob">Dunkku hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="dungeonFun"
+      />
+      <p><span id="dungeonFunOut"></span></p>
+
+      <p class="classorjob">Raidi hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="raidFun"
+      />
+      <p><span id="raidFunOut"></span></p>
+
+      <p class="classorjob">PvP hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="pvpFun"
+      />
+      <p><span id="pvpFunOut"></span></p>
+
+      <p class="classorjob">Rotaatio hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="rotationFun"
+      />
+      <p><span id="rotationFunOut"></span></p>
+
+      <p class="classorjob">Maailma hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="worldFun"
+      />
+      <p><span id="worldFunOut"></span></p>
+
+      <p class="classorjob">Random hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="randomFun"
+      />
+      <p><span id="randomFunOut"></span></p>
+
+      <p class="classorjob">Transmog hupi:</p>
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value="5"
+        class="slider"
+        id="transmogFun"
+      />
+      <p><span id="transmogFunOut"></span></p>
+    </div>
+
+    <p>
+      <button onclick="showPrevious()" id="previousButton" class="buttonleft">
+        Edellinen
+      </button>
+      <button onclick="showNext()" id="nextButton" class="buttonright">
+        Seuraava
+      </button>
+    </p>
+
+    <script src="alttihommeli.js"></script>
+  </body>
+</html>
